@@ -1,7 +1,13 @@
 <script setup>
+import axios from 'axios';
 import { RouterLink, RouterView } from 'vue-router'
-import ProductPage from "./views/ProductPage.vue"
-
+ import { reactive, watch } from '@vue/runtime-core';
+const products = reactive({
+    data: {}
+})
+axios.get('https://api.storerestapi.com/products')
+    .then(response => products.data = response.data)
+    console.log(products)
 </script>
 
 <template>
