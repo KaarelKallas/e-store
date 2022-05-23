@@ -1,9 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import ProductPage from "./views/ProductPage.vue"
 
 </script>
 
 <template>
+    <ProductPage/>
   <RouterView />
 </template>
 
@@ -13,7 +15,6 @@ import { RouterLink, RouterView } from 'vue-router'
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
 
   font-weight: normal;
 }
