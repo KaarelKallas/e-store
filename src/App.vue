@@ -1,6 +1,12 @@
 <script setup>
+import axios from 'axios';
 import { RouterLink, RouterView } from 'vue-router'
-
+const products = {
+    data: {}
+}
+axios.get('https://fakestoreapi.com/products')
+    .then(response => products.data = response.data)
+    console.log(products)
 </script>
 
 <template>
