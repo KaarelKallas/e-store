@@ -1,9 +1,10 @@
 <script setup>
 import axios from 'axios';
 import { RouterLink, RouterView } from 'vue-router'
-const products = {
+ import { reactive, watch } from '@vue/runtime-core';
+const products = reactive({
     data: {}
-}
+})
 axios.get('https://fakestoreapi.com/products')
     .then(response => products.data = response.data)
     console.log(products)
