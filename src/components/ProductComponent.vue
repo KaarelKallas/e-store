@@ -1,7 +1,7 @@
 <template>
-    <img :src="item.image" alt="" class="w-[100px] h-auto absolute z-10 bottom-[57px] left-[25px]">
-    <div class="w-[150px] h-[150px] bg-[#E5DFA0] absolute bottom-0 flex items-end justify-center">
-        <p class="z-20 mb-[7px] text-black text-[10px] leading-[13px] font-[Acme] text-center w-[100px]">{{item.title}}</p>
+    <div class="bg-[#E5DFA0] h-60 flex flex-col items-center justify-center">
+        <img :src="item.image" alt="" class="-mt-10 w-[100px] h-80 z-10">
+        <p class="text-black font-[Acme] text-center p-4">{{item.title}}</p>
     </div>
 </template>
 
