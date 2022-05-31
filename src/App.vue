@@ -1,4 +1,5 @@
 <script setup>
+
 import axios from 'axios';
 import { RouterLink, RouterView } from 'vue-router'
 const products = {
@@ -7,6 +8,7 @@ const products = {
 axios.get('https://fakestoreapi.com/products')
     .then(response => products.data = response.data)
     console.log(products)
+
 </script>
 
 <template>
@@ -19,8 +21,8 @@ axios.get('https://fakestoreapi.com/products')
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-
+  padding: 0;
+  transition: margin-left .5s;
   font-weight: normal;
 }
 
