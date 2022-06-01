@@ -2,6 +2,7 @@
 import ProductComponent from '../components/ProductComponent.vue';
 import axios from 'axios';
 import { reactive, watch } from '@vue/runtime-core';
+import Footer from "../components/Footer.vue";
 
 const products = reactive({
     data: {}
@@ -32,6 +33,7 @@ axios.get('https://fakestoreapi.com/products')
         </div>
     </div> 
 </div>
+<Footer />
 </template>
 
 <script>

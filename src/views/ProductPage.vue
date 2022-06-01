@@ -38,10 +38,14 @@ axios.get('https://fakestoreapi.com' + pagepath)
       <button class="mt-[36px] bg-[#E5DFA0] text-[#000000] text-[15px] w-[114px] h-[40px]">BUY NOW</button>
     </div>
   </div>
-  <div class="flex flex-col items-center bg-[#E5DFA0] h-[812px] w-[193px]">
-    <img src="../assets/heart.svg" alt="">
-    <img src="../assets/shopping-cart.svg" alt="">
-    <img :src="products.data.image" alt="">
+  <div class="flex flex-col items-center bg-[#E5DFA0] h-screen w-1/2">
+    <div class="flex justify-end w-full">
+      <img src="../assets/heart.svg" alt="">
+      <img src="../assets/shopping-cart.svg" alt="">
+    </div>
+    <div class="flex h-full items-center">
+      <img :src="products.data.image" alt="" class="max-h-60">
+    </div>
   </div>
 </div>
 </template>
