@@ -3,6 +3,7 @@ import ProductComponent from '../components/ProductComponent.vue';
 import axios from 'axios';
 import { reactive, watch } from '@vue/runtime-core';
 import Footer from "../components/Footer.vue";
+import Header from "../components/HeaderView.vue";
 
 const products = reactive({
     data: {}
@@ -13,6 +14,7 @@ axios.get('https://fakestoreapi.com/products')
 </script>
 
 <template>
+<Header />
 <div class="grid grid-cols-2 justify-items-center px-6">
     <div class="mt-14">
         <div
