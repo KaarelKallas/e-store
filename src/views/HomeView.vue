@@ -12,26 +12,25 @@ axios.get('https://fakestoreapi.com/products')
 </script>
 
 <template>
-<div class="grid grid-cols-2 justify-center px-6">
+<div class="grid grid-cols-2 justify-items-center px-6">
     <div class="mt-14">
         <div
         v-for="(item, index) in products.data.slice(0,6)"
-        class="w-[150px] h-[300px]">
+        class="w-[150px] h-[254px]">
             <RouterLink :to="'/products/' + item.id" class="">
                 <ProductComponent :item="item"/>
             </RouterLink>
         </div>
     </div>
-       <div class="mt-32 space-y-10">
-            <div
-            v-for="(item, index) in products.data.slice(6,12)"
-            class="w-[150px] h-[254px]">
-                <RouterLink :to="'/products/' + item.id" class="w-[150px] h-[254px]">
-                    <ProductComponent :item="item"/>
-                </RouterLink>
-            </div>
-       </div> 
-        
+    <div class="mt-32">
+        <div
+        v-for="(item, index) in products.data.slice(6,12)"
+        class="w-[150px] h-[254px]">
+            <RouterLink :to="'/products/' + item.id" class="">
+                <ProductComponent :item="item"/>
+            </RouterLink>
+        </div>
+    </div> 
 </div>
 </template>
 
